@@ -1,2 +1,13 @@
-1234568 - kjghgueugnkl
-for i in j
+def days0 (shedule, unique_days):
+    a = set(unique_days)
+    for j in shedule:
+        a -= set(shedule[j])
+    return a
+   
+
+def cound_piople(shedule, unique_days):
+    week = dict().fromkeys(unique_days, 0)
+    for i in shedule:
+        for j in shedule[i]:
+            week[j] += 1
+    return week
